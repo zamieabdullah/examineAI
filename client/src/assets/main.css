@@ -1,0 +1,5 @@
+@import './base.css';
+
+html, body {
+    background: linear-gradient(to top, rgb(4, 117, 108), white);
+}
