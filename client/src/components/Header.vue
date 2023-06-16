@@ -1,27 +1,27 @@
 <template>
-    <header class="navbar navbar-expand-lg bg-light">
-        <h1>ExamineAI</h1>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <RouterLink to='/' class="nav-link">Home</RouterLink>
-                </li>
-                <li class="nav-item">
-                    <RouterLink to='/about' class="nav-link">About</RouterLink>
-                </li>
-                <li class="nav-item">
-                    <RouterLink to='/resources' class="nav-link">Resources</RouterLink>
-                </li>
-                <li class="nav-item">
-                    <RouterLink to='/signin' class="nav-link">Sign In</RouterLink>
-                </li>
-            </ul>
-        </div>
-    </header>
+<header class="navbar navbar-expand-lg bg-light">
+    <h1>ExamineAI</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <RouterLink to='/' class="nav-link">Home</RouterLink>
+            </li>
+            <li class="nav-item">
+                <RouterLink to='/about' class="nav-link">About</RouterLink>
+            </li>
+            <li class="nav-item">
+                <RouterLink to='/resources' class="nav-link">Resources</RouterLink>
+            </li>
+            <li class="nav-item">
+                <RouterLink to='/signin' class="nav-link">Sign In</RouterLink>
+            </li>
+        </ul>
+    </div>
+</header>
 </template>
 
 <script>
