@@ -1,9 +1,9 @@
 <template>
 <div class="container text-center setup">
-    <h1 class="mt-5">
+    <h1 class="mt-5 intro">
         Welcome to ExamineAI
     </h1>
-    <div class="intro">
+    <div>
         <p class="fs-4">
             The power of artificial intelligence meets your well-being. 
             By analyzing your symptoms against a vast database of medical knowledge, ExamineAI generates 
@@ -29,7 +29,7 @@ import { RouterLink } from 'vue-router';
 <style>
 .setup {
     margin-top: 175px;
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -48,7 +48,7 @@ h1 {
 }
 
 .intro {
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 button.btn.btn-primary.btn-lg {
