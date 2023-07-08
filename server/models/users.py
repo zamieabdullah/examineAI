@@ -7,7 +7,7 @@ class User(db.Model):
     first_name = db.Column(db.String(50), nullable=False)
     middle_name = db.Column(db.String(50), nullable=True)
     last_name = db.Column(db.String(50), nullable=False)
-    email_address = db.Column(db.String(100), nullable=False)
+    email_address = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), nullable=False)
 
     def set_password(self, password):
