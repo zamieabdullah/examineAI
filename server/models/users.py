@@ -9,8 +9,6 @@ class User(db.Model):
     last_name = db.Column(db.String(50), nullable=False)
     email_address = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(50), nullable=False)
-    birthday_id = db.Column(db.Integer, db.ForeignKey('birthday.id'), nullable=False)
-    birthday = db.relationship('Birthday', back_populates='user')
 
     def set_password(self, password):
         self.password = pbkdf2_sha256.hash(password)
@@ -24,11 +22,13 @@ class Birthday(db.Model):
     year = db.Column(db.Integer, nullable=False)
     month = db.Column(db.Integer, nullable=False)
     day = db.Column(db.Integer, nullable=False)
-    user = db.relationship('User', back_populates='birthday')
+    personal_data = db.relationship('User', back_populates='birthday')
 
 class Personal_Data(db.Model):
     __tablename__ = 'personal_data'
     id = db.Column(db.Integer, primary_key=True)
+    birthday_id = db.Column(db.Integer, db.ForeignKey('birthday.id'), nullable=False)
+    birthday = db.relationship('Birthday', back_populates='personal_data')
     weight = db.Column(db.Integer, nullable=False)
     height = db.Column(db.Integer, nullable=False)
     bmi = db.Column(db.Float, nullable=False)
